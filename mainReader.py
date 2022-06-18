@@ -8,7 +8,8 @@ if __name__ == "__main__":
             3. Ispis svih merenja za odredjeni mesec\n\
             4. Ispis svih merenja za korisnika\n\
             5. Ispis svih merenja za adresu\n\
-            6.Izlaz'
+            6. Ispis svih merenja po gradu\n\
+            7.Izlaz'
             )
         ulaz=int(input('Unesite komandu:'))
         if ulaz==1:
@@ -24,3 +25,8 @@ if __name__ == "__main__":
         elif ulaz==5:
             addr=input("Unesite adresu")
             reader.ReadAllValuesByAddr(addr)
+        elif ulaz==6:
+            city=input("Unesite grad")
+            reader.ReadAllValuesByCity(city)
+        elif ulaz==7:
+            exit()
