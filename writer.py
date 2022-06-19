@@ -13,9 +13,9 @@ class Writerr:
         self.dumpingBuffer=dumpingBuf
     def Generate(self):
         while(True):
-            sleep(random())
+            sleep(random.random())
             id=random.randint(0, 9)   #generates random user id
-            value=random()*1000      #generates random electricity usage value
+            value=random.random()*1000      #generates random electricity usage value
             details=ElectricityDetails(id,value)
             print(f"New value-> userId:{id}  value:{value}")
             self.dumpingBuffer.Send(details)
